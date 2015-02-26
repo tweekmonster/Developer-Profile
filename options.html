@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Developer Profile Options</title>
+        <style type="text/css">
+            body {
+                font-size: 16px;
+                padding: 15px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .small {
+                font-size: 0.8em;
+            }
+
+            .options label {
+                display: block;
+                padding: 5px;
+                cursor: pointer;
+            }
+
+            .options label:hover {
+                background-color: #f8f8f8;
+            }
+
+            .options label:hover .info span {
+                text-decoration: underline;
+            }
+
+            .options label > div {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .info > span {
+                display: block;
+            }
+
+            .info > span:nth-child(1) {
+                font-size: 1.3em;
+            }
+
+            .info > span:nth-child(2) {
+                color: #777;
+            }
+        </style>
+        <script type="text/javascript" src="options.js"></script>
+    </head>
+    <body>
+        <section class="about">
+            <h1>Developer Profile</h1>
+
+            <p>This extension will delete the following browser data when all windows in the current profile are closed.</p>
+
+            <p class="small">(Clicking the trash icon will clear browser data, too)</p>
+        </section>
+        <section class="options">
+            <label>
+                <div class="check"><input id="appcache" type="checkbox" name="appcache" checked></div>
+                <div class="info">
+                    <span>appcache</span>
+                    <span>Websites' appcaches.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="cache" type="checkbox" name="cache" checked></div>
+                <div class="info">
+                    <span>cache</span>
+                    <span>The browser's cache.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="cookies" type="checkbox" name="cookies" checked></div>
+                <div class="info">
+                    <span>cookies</span>
+                    <span>The browser's cookies.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="downloads" type="checkbox" name="downloads" checked></div>
+                <div class="info">
+                    <span>downloads</span>
+                    <span>The browser's download list.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="fileSystems" type="checkbox" name="fileSystems" checked></div>
+                <div class="info">
+                    <span>fileSystems</span>
+                    <span>Websites' file systems.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="formData" type="checkbox" name="formData"></div>
+                <div class="info">
+                    <span>formData</span>
+                    <span>The browser's stored form data.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="history" type="checkbox" name="history"></div>
+                <div class="info">
+                    <span>history</span>
+                    <span>The browser's history.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="indexedDB" type="checkbox" name="indexedDB" checked></div>
+                <div class="info">
+                    <span>indexedDB</span>
+                    <span>Websites' IndexedDB data.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="localStorage" type="checkbox" name="localStorage" checked></div>
+                <div class="info">
+                    <span>localStorage</span>
+                    <span>Websites' local storage data.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="passwords" type="checkbox" name="passwords"></div>
+                <div class="info">
+                    <span>passwords</span>
+                    <span>Stored passwords.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="pluginData" type="checkbox" name="pluginData" checked></div>
+                <div class="info">
+                    <span>pluginData</span>
+                    <span>Plugins' data.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="serviceWorkers" type="checkbox" name="serviceWorkers" checked></div>
+                <div class="info">
+                    <span>serviceWorkers</span>
+                    <span>Service Workers.</span>
+                </div>
+            </label>
+            <label>
+                <div class="check"><input id="webSQL" type="checkbox" name="webSQL" checked></div>
+                <div class="info">
+                    <span>webSQL</span>
+                    <span>Websites' WebSQL data.</span>
+                </div>
+            </label>
+        </section>
+    </body>
+</html>

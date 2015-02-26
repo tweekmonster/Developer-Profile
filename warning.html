@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>/!\ Attention</title>
+
+        <style type="text/css">
+            body {
+                font-size: 22px;
+                text-align: center;
+                padding: 15px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            h1 {
+                color: #c0392b;
+                text-transform: uppercase;
+            }
+
+            button {
+                cursor: pointer;
+                font-size: 24px;
+                color: #fff;
+
+                max-width: 500px;
+                margin-top: 50px;
+                background-color: #e74c3c;
+                box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3) inset;
+                padding: 30px;
+                border: none;
+                border-radius: 12px;
+                transition: background-color 0.25s ease-in-out;
+            }
+
+            button:hover {
+                background-color: #c0392b;
+            }
+        </style>
+
+        <script type="text/javascript" src="warning.js"></script>
+    </head>
+    <body>
+        <h1>Attention</h1>
+
+        <p>This extension will <strong>delete</strong> this profile's browser data when all windows are closed.
+        If this is your main profile, you should <strong>remove this extension now</strong> and reinstall it on a profile you would expect this behavior on.</p>
+
+        <p>You must click the button below before this extension will work.</p>
+
+        <button id="acknowledge">This is a profile I plan to use for development.<br><br>I am aware that this extension deletes browser data when all windows in this profile are closed.</button>
+    </body>
+</html>
