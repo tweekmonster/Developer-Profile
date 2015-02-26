@@ -103,6 +103,15 @@ chrome.browserAction.onClicked.addListener(function(tab)
 });
 
 
+chrome.runtime.onStartup.addListener(function()
+{
+    if (localStorage['warningAcknowledged'])
+    {
+        clearData();
+    }
+});
+
+
 chrome.runtime.onInstalled.addListener(function()
 {
     acknowledged();
