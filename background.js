@@ -60,6 +60,7 @@ chrome.tabs.onRemoved.addListener(function(tab, removeInfo)
     }
 
     // If an entire window is closed, this event will fire again before the data is cleared
+    localStorage['clearOnStartup'] = 'yes';
     clearInterval(clearTimer);
     clearTimer = setTimeout(function()
     {
@@ -75,7 +76,10 @@ chrome.tabs.onRemoved.addListener(function(tab, removeInfo)
             if (!tabCount)
             {
                 console.log('No tabs left.  Clearing browser data...');
-                clearData();
+                clearData(function()
+                {
+                    localStorage['clearOnStartup'] = null;
+                });
             }
         });
     }, 500);
@@ -105,9 +109,13 @@ chrome.browserAction.onClicked.addListener(function(tab)
 
 chrome.runtime.onStartup.addListener(function()
 {
-    if (localStorage['warningAcknowledged'])
+    if (localStorage['warningAcknowledged'] && localStorage['clearOnStartup'] === 'yes')
     {
-        clearData();
+        console.warn('Data was not cleared in a previous session');
+        clearData(function()
+        {
+            localStorage['clearOnStartup'] = null;
+        });
     }
 });
 
